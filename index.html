@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>True American</title>
+    <meta content="True American is an elaborate drinking game, invented by four respectable personages : Nick, Winston, Schmidt and Coach." name="description">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <style>
+
+      @import url(http://fonts.googleapis.com/css?family=Roboto:100,900);
+
+      * {
+        box-sizing: border-box;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+      }
+
+      html {
+        background: rgb(255, 235, 205);
+        color: rgb(205, 183, 158);
+        overflow-x: hidden;
+        height: 100%;
+      }
+
+      body {
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        /*padding: 20px;*/
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 100%;
+        text-transform: uppercase;
+        text-align: justify;
+
+        /*border: 1px solid black;*/
+
+        counter-reset: section;
+
+        overflow: hidden;
+
+        outline: 1px solid black;
+      }
+
+      h1, h2 {
+        margin-top: 100pt;
+        margin-bottom: 100pt;
+        /*box-shadow: 0 1px 0 0 red, 0 -1px 0 0 red*/
+      }
+
+      h2 > *:first-child:before {
+        counter-increment: section;
+        content: "#" counter(section) "";
+        opacity: 0.5;
+      }
+
+      h1 > *, h2 > * {
+        transform-origin: 0 0;
+        position: relative;
+        font-size: 17pt;
+        display: block;
+      }
+
+      .vertical {
+        width: 0.1em;
+        display: inline-block;
+        /*transform-origin: 100% 0%;*/
+        position: relative;
+
+        opacity: 0.5;
+
+        transform: translate(-0.3pt, -6.2pt) scale(0.172) rotate(90deg);
+      }
+
+      .highlight, #name1 {
+        color: rgb(255, 0, 73);
+      }
+
+      [id$='3'] {
+        background: rgb(255, 0, 73);
+        color: rgb(255, 235, 205);
+        /*border-left: 10px solid rgb(255, 0, 73);
+        left: -10px;*/
+      }
+
+      #name {
+        height: 280px;
+        margin: 40px 0;
+        border: solid rgb(205, 183, 158);
+        border-width: 2px 0;
+      }
+      #name1    { transform: translateX(-1pt) scale(3.965); }
+      #name2    { transform: translate(-9.5pt, 5pt) scale(10.35); }
+
+      #lava     { height: 350px; }
+      #lava1    { transform: translateX(-2pt) scale(4.84); }
+      #lava2    { transform: translate(-9.5pt, 26pt) scale(8.36); }
+      #lava3    { transform: translate(-0.5pt, 145pt) scale(3); }
+
+      #castle   { height: 230px; }
+      #castle1  { transform: translateX(-1pt) scale(3.8); }
+      #castle2  { transform: translate(-5pt, 23.5pt) scale(4.395); }
+      #castle3  { transform: translate(-0.5pt, 78pt) scale(1.899); }
+
+      #king     { height: 170px; }
+      #king1    { transform: translateX(-1pt) scale(2.973); }
+      #king2    { transform: translate(-2pt, 15.5pt) scale(3.058); }
+      #king3    { transform: translate(-1.2pt, 48pt) scale(1.287); }
+
+      #path     { height: 170px; }
+      #path1    { transform: translateX(-1pt) scale(2.083); }
+      #path2    { transform: translate(0pt, 3.5pt) scale(2.555); }
+      #path3    { transform: translate(-1.2pt, 29pt) scale(1.683); }
+
+      #spots     { height: 95px; }
+      #spots1    { transform: translateX(-1pt) scale(2.248); }
+      #spots2    { transform: translate(-1pt, 8pt) scale(2.074); }
+
+      #beers     { height: 100px;  }
+      #beers1    { transform: translateX(-1pt) scale(2.015); }
+      #beers2    { transform: translate(-2pt, 8pt) scale(2.271); }
+
+      #begin     { height: 800px;  }
+      #begin1    { transform: translateX(-1pt) scale(2.015); }
+      #begin2    { transform: translate(-1pt, 3pt) scale(2.382); }
+      #begin3    { transform: translate(-2pt, 30pt) scale(3.813); }
+      #begin4    { transform: translate(-5pt, 23pt) scale(17.37); }
+      #begin5    { transform: translate(-15.8pt, 216pt) scale(17.32); }
+
+
+
+
+
+      text {
+        font-family: "Roboto";
+        fill: rgb(205, 183, 158);
+      }
+
+
+      ellipse, line, path {
+        fill: none;
+        stroke: rgb(205, 183, 158);
+        stroke-width: 5px;
+      }
+
+      line, .Castle, .Crown {
+       stroke-width: 2px; 
+      }
+
+      .King, .Crown, .Castle, .Infantry {
+        stroke: rgb(255, 0, 73);
+      }
+
+      .Stone {
+       stroke-width: 4px;
+       fill: rgb(255, 235, 205);
+      }
+
+      .Path {
+        stroke-width: 2px;
+        stroke-dasharray: 2, 5;
+      }
+
+    </style>
+</head>
+
+<body>
+
+<h1 id='name'>
+  <span id='name1'>True American</span>
+  <span id='name2'>Rules</span>
+</h1>
+
+<h2 id='lava'>
+  <span id='lava1'>The floor</span>
+  <span id='lava2'>is <span class='vertical'>fucking</span><span class='highlight'>lava</span></span>
+  <span id='lava3'>Who dive in, die vain</span>
+</h2>
+
+<h2 id='castle'>
+  <span id='castle1'>In the middle</span>
+  <span id='castle2'>is the <span class='vertical'>fucking</span><span class='highlight'>Castle</span></span>
+  <span id='castle3'>Who sip the King, win the game</span>
+</h2>
+
+<h2 id='king'>
+  <span id='king1'>The <span class='highlight'>Secret Order</span></span>
+  <span id='king2'>guards the <span class='vertical'>fucking</span>Castle</span>
+  <span id='king3'>four infantry lines to drink, before the king</span>
+</h2>
+
+<h2 id='path'>
+  <span id='path1'>A path of <span class='highlight'>twenty pebbles</span></span>
+  <span id='path2'>surrounds the <span class='vertical'>fucking</span>Castle</span>
+  <span id='path3'>Walk around to attack the pawns</span>
+</h2>
+
+<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>King</title>
+  <ellipse class="King" ry="30" rx="30" cy="350" cx="350"/>
+
+  <g>
+    <path class="Crown" d="
+      m 340 365
+      l 20 0
+      l 8 -15
+      q -13 12 -18 -10
+      M 340 365
+      l -8 -15
+      q 13 12 18 -10
+      "/>
+    <ellipse class="Crown" ry="3" rx="3" cy="337" cx="350"/>
+    <ellipse class="Crown" ry="3" rx="3" cy="348" cx="331"/>
+    <ellipse class="Crown" ry="3" rx="3" cy="348" cx="369"/>
+  </g>
+ </g>
+
+ <g>
+  <title>Castle</title>
+  <ellipse class="Castle" ry="120" rx="120" cy="350" cx="350"/>
+ </g>
+
+ <g>
+  <title>Secret Order</title>
+   <g>
+    <title>Nick</title>
+    <!-- <text x="30" y="30" transform="rotate(-45 40 35)">N</text> -->
+    <ellipse class="Infantry" rx="7" ry="7" cx="318" cy="318"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="303" cy="303"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="288" cy="288"/>
+    <line x1="40" y1="40" x2="250" y2="250" />
+   </g>
+
+   <g>
+    <title>Wilson</title>
+    <!-- <text x="30" y="670" transform="rotate(45 -40 -35)">W</text> -->
+    <ellipse class="Infantry" rx="7" ry="7" cx="318" cy="382"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="303" cy="397"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="288" cy="412"/>
+    <line x1="40" y1="660" x2="250" y2="450" />
+   </g>
+
+   <g>
+    <title>Schmidt</title>
+    <ellipse class="Infantry" rx="7" ry="7" cx="382" cy="382"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="397" cy="397"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="412" cy="412"/>
+    <line x1="660" y1="660" x2="450" y2="450" />
+   </g>
+
+   <g>
+    <title>Coach</title>
+    <ellipse class="Infantry" rx="7" ry="7" cx="382" cy="318"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="397" cy="303"/>
+    <ellipse class="Infantry" rx="7" ry="7" cx="412" cy="288"/>
+    <line x1="660" y1="40" x2="450" y2="250" />
+   </g>
+ </g>
+
+
+ <g>
+   <title>Stone path</title>
+
+   <path class="Path" x1="140" y1="35" x2="260" y2="90"/>
+
+   <path class="Path" d="
+      M 140 35
+      L 260 90
+      L 350 180
+      L 440 90
+      L 560 35
+      L 665 140
+      L 610 260
+      L 520 350
+      L 610 440
+      L 665 560
+      L 560 665
+      L 440 610
+      L 350 520
+      L 260 610
+      L 140 665
+      L 35 560
+      L 90 440
+      L 180 350
+      L 90 260
+      L 35 140
+      L 140 35
+      "/>
+   <g>
+     <ellipse class="Stone" rx="30" ry="30" cx="140" cy="35"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="260" cy="90"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="350" cy="180"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="440" cy="90"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="560" cy="35"/>
+   </g>
+
+   <g>
+     <ellipse class="Stone" rx="30" ry="30" cx="35" cy="140"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="90" cy="260"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="180" cy="350"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="90" cy="440"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="35" cy="560"/>
+   </g>
+
+
+   <g>
+     <ellipse class="Stone" rx="30" ry="30" cx="665" cy="140"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="610" cy="260"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="350" cy="520"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="610" cy="440"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="665" cy="560"/>
+   </g>
+   
+   <g>
+     <ellipse class="Stone" rx="30" ry="30" cx="140" cy="665"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="260" cy="610"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="520" cy="350"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="440" cy="610"/>
+     <ellipse class="Stone" rx="30" ry="30" cx="560" cy="665"/>
+   </g>
+ </g>
+</svg>
+
+<h2 id='spots'>
+  <span id='spots1'>But in only four places</span>
+  <span id='spots2'>Can you reach the premises</span>
+</h2>
+
+<h2 id='beers'>
+  <span id='beers1'>Carry no more than three</span>
+  <span id='beers2'>No less than one, at once</span>
+</h2>
+
+<h2 id='begin'>
+  <span id='begin1'>Team as you please before</span>
+  <span id='begin2'>the assault on the fort</span>
+  <span id='begin3'>one, two, three</span>
+  <span id='begin4'>JFK</span>
+  <span id='begin5'><span class='highlight'>FDR</span></span>
+</h2>
+
+</body>
+</html>
