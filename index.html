@@ -7,11 +7,16 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <style>
 
-      @import url(http://fonts.googleapis.com/css?family=Roboto:100,900);
+      @font-face {
+          font-family: 'Roboto';
+          src: url('Roboto-Black.ttf') format('truetype');
+          font-weight: 900;
+          font-style: normal;
+      }
 
       * {
         box-sizing: border-box;
-        white-space: nowrap;
+        /*white-space: nowrap;*/
         padding: 0;
         margin: 0;
       }
@@ -27,27 +32,18 @@
         max-width: 700px;
         width: 100%;
         margin: auto;
-        /*padding: 20px;*/
 
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
-        font-size: 100%;
         text-transform: uppercase;
-        text-align: justify;
-
-        /*border: 1px solid black;*/
+        text-align: center;
 
         counter-reset: section;
-
-        overflow: hidden;
-
-        /*outline: 1px solid black;*/
       }
 
       h1, h2 {
         margin-top: 100pt;
         margin-bottom: 100pt;
-        /*box-shadow: 0 1px 0 0 red, 0 -1px 0 0 red*/
       }
 
       h2 > *:first-child:before {
@@ -59,7 +55,7 @@
       h1 > *, h2 > * {
         transform-origin: 0 0;
         position: relative;
-        font-size: 17pt;
+        font-size: 30pt;
         display: block;
       }
 
@@ -71,7 +67,7 @@
 
         opacity: 0.5;
 
-        transform: translate(-0.3pt, -6.2pt) scale(0.172) rotate(90deg);
+        transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
       }
 
       .highlight, #name1 {
@@ -81,17 +77,31 @@
       [id$='3'] {
         background: rgb(255, 0, 73);
         color: rgb(255, 235, 205);
-        /*border-left: 10px solid rgb(255, 0, 73);
-        left: -10px;*/
+        /*max-width: auto;*/
+        /*width: 200%;*/
       }
 
       #name {
-        height: 280px;
+        /*height: 280px;*/
         margin: 30% 0 70% 0;
         border: solid rgb(205, 183, 158);
         border-width: 2px 0;
       }
-      #name1    { transform: translateX(-1pt) scale(3.965); }
+
+      #name1 {
+        font-size: 65pt;
+      }
+
+      #name2 {
+        font-size: 160pt;
+      }
+
+      #begin4, #begin5 {
+        font-size: 270pt;
+        line-height: 0.8em;
+      }
+
+/*      #name1    { transform: translateX(-1pt) scale(3.965); }
       #name2    { transform: translate(-9.5pt, 6pt) scale(10.35); }
 
       #lava     { height: 350px; }
@@ -128,7 +138,7 @@
       #begin3    { transform: translate(-2pt, 30pt) scale(3.813); }
       #begin4    { transform: translate(-5pt, 23pt) scale(17.37); }
       #begin5    { transform: translate(-15.8pt, 216pt) scale(17.32); }
-
+*/
 
 
 
@@ -344,8 +354,8 @@
 </h2>
 
 <h2 id='beers'>
-  <span id='beers1'>Carry no more than three</span>
-  <span id='beers2'>No less than one, at once</span>
+  <span id='beers1'>Carry no less than one</span>
+  <span id='beers2'>No more than three, at once</span>
 </h2>
 
 <h2 id='begin'>
