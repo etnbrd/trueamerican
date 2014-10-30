@@ -54,10 +54,11 @@
       }
 
       h1 > *, h2 > * {
-        transform-origin: 0 0;
         position: relative;
-        font-size: 30pt;
+        font-size: 1.3em;
         display: block;
+        width: 100%;
+        line-height: 0.8em;
       }
 
       .vertical {
@@ -68,7 +69,10 @@
 
         opacity: 0.5;
 
-        transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
+        -webkit-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
+        -ms-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
+        -o-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
+        transform: translate(-0.3pt, -0.36em) scale(0.172) rotate(90deg);
       }
 
       .highlight, #name1 {
@@ -90,59 +94,43 @@
       }
 
       #name1 {
-        font-size: 65pt;
+        font-size: 2.7em;
       }
 
       #name2 {
-        font-size: 160pt;
+        font-size: 7em;
       }
 
       #begin4, #begin5 {
-        font-size: 270pt;
+        font-size: 16em;
         line-height: 0.8em;
       }
 
-/*      #name1    { transform: translateX(-1pt) scale(3.965); }
-      #name2    { transform: translate(-9.5pt, 6pt) scale(10.35); }
+      #lava1    { font-size: 4.5em; }
+      #lava2    { font-size: 7.8em; }
+      #lava3    { font-size: 2.7em; }
 
-      #lava     { height: 350px; }
-      #lava1    { transform: translateX(-2pt) scale(4.84); }
-      #lava2    { transform: translate(-9.5pt, 26pt) scale(8.36); }
-      #lava3    { transform: translate(-0.5pt, 145pt) scale(3); }
+      #castle1  { font-size: 3.5em; }
+      #castle2  { font-size: 4.1em; }
+      #castle3  { font-size: 1.8em; }
 
-      #castle   { height: 230px; }
-      #castle1  { transform: translateX(-1pt) scale(3.8); }
-      #castle2  { transform: translate(-5pt, 23.5pt) scale(4.395); }
-      #castle3  { transform: translate(-0.5pt, 78pt) scale(1.899); }
+      #king1    { font-size: 2.7em; }
+      #king2    { font-size: 2.8em; }
+      #king3    { font-size: 1.7em; }
 
-      #king     { height: 170px; }
-      #king1    { transform: translateX(-1pt) scale(2.973); }
-      #king2    { transform: translate(-2pt, 15.5pt) scale(3.058); }
-      #king3    { transform: translate(-1.2pt, 48pt) scale(1.287); }
+      #path1    { font-size: 1.9em; }
+      #path2    { font-size: 2.37em; }
+      #path3    { font-size: 1.5em; }
 
-      #path     { height: 170px; }
-      #path1    { transform: translateX(-1pt) scale(2.083); }
-      #path2    { transform: translate(0pt, 3.5pt) scale(2.555); }
-      #path3    { transform: translate(-1.2pt, 29pt) scale(1.683); }
+      #spots1    { font-size: 2.1em; }
+      #spots2    { font-size: 1.9em; }
 
-      #spots     { height: 95px; }
-      #spots1    { transform: translateX(-1pt) scale(2.248); }
-      #spots2    { transform: translate(-1pt, 8pt) scale(2.074); }
+      #beers1    { font-size: 2.1em; }
+      #beers2    { font-size: 1.88em; }
 
-      #beers     { height: 100px;  }
-      #beers1    { transform: translateX(-1pt) scale(2.015); }
-      #beers2    { transform: translate(-2pt, 8pt) scale(2.271); }
-
-      #begin     { height: 800px;  }
-      #begin1    { transform: translateX(-1pt) scale(2.015); }
-      #begin2    { transform: translate(-1pt, 3pt) scale(2.382); }
-      #begin3    { transform: translate(-2pt, 30pt) scale(3.813); }
-      #begin4    { transform: translate(-5pt, 23pt) scale(17.37); }
-      #begin5    { transform: translate(-15.8pt, 216pt) scale(17.32); }
-*/
-
-
-
+      #begin1    { font-size: 1.8em; }
+      #begin2    { font-size: 2.1em; }
+      #begin3    { font-size: 3.4em; }
 
       text {
         font-family: "Roboto";
@@ -174,19 +162,75 @@
         stroke-dasharray: 2, 5;
       }
 
+      svg {
+        width: 100%;
+      }
 
-      @media (max-width: 700px) {
-        html {
-          transform: scale(0.7);
+      @media (max-width: 740px) {
+        body {
+          font-size: 92%;
+        }
+      }
+
+      @media (max-width: 710px) {
+        body {
+          font-size: 86%;
+        }
+      }
+
+      @media (max-width: 680px) {
+        body {
+          font-size: 86%;
+        }
+      }
+
+      @media (max-width: 650px) {
+        body {
+          font-size: 84%;
+        }
+      }
+
+      @media (max-width: 620px) {
+        body {
+          font-size: 79%;
+        }
+      }
+
+      @media (max-width: 590px) {
+        body {
+          font-size: 75%;
+        }
+      }
+
+      @media (max-width: 560px) {
+        body {
+          font-size: 71%;
+        }
+      }
+
+      @media (max-width: 530px) {
+        body {
+          font-size: 67%;
         }
       }
 
       @media (max-width: 500px) {
-        html {
-          transform: scale(0.4);
+        body {
+          font-size: 64%;
         }
       }
 
+      @media (max-width: 470px) {
+        body {
+          font-size: 59%;
+        }
+      }
+
+      @media (max-width: 440px) {
+        body {
+          font-size: 44%;
+        }
+      }
 
     </style>
 </head>
@@ -222,7 +266,9 @@
   <span id='path3'>Walk around to attack the pawns</span>
 </h2>
 
-<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">
+<!-- width="700" height="700" -->
+
+<svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>King</title>
   <ellipse class="King" ry="30" rx="30" cy="350" cx="350"/>
