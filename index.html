@@ -14,6 +14,13 @@
           font-style: normal;
       }
 
+      @font-face {
+          font-family: 'Roboto';
+          src: url('Roboto-Thin.ttf') format('truetype');
+          font-weight: 100;
+          font-style: normal;
+      }
+
       * {
         box-sizing: border-box;
         padding: 0;
@@ -82,6 +89,7 @@
 
       hr:after {
         content: '⚔';
+        font-weight: 100;
 
         position: relative;
         top: -0.5em;
@@ -98,6 +106,21 @@
         padding: 100px 0;
         border: solid rgb(205, 183, 158);
         border-width: 2px 0;
+      }
+
+      #name:before {
+        content: "♔";
+        font-size: 2em;
+        font-weight: 100;
+
+        display: block;
+        margin: -0.7em auto -0.3em auto;
+
+        position: relative;
+        top: -100px;
+
+        width: 2em;
+        background: rgb(255, 235, 205);
       }
 
       #name1 {
@@ -138,6 +161,23 @@
       #begin1    { font-size: 1.8em; }
       #begin2    { font-size: 2.1em; }
       #begin3    { font-size: 2.6em; }
+
+      a, a:visited {
+        color: inherit;
+        text-decoration: none; 
+      }
+
+      a:hover {
+        color: rgb(255, 0, 73);
+      }
+
+      footer {
+        padding: 100px 0;
+        text-transform: none;
+        font-weight: 100;
+        font-size: 1em;
+      }
+
 
       text {
         font-family: "Roboto";
@@ -431,6 +471,19 @@
   <span id='begin4'>JFK</span>
   <span id='begin5'><span class='highlight'>FDR</span></span>
 </h2>
+
+<footer>
+  Made with <span class='highlight'>♡</span> in 2014 by <a href="http://etnbrd.com">etnbrd</a>
+</footer>
+
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  // ga('create', 'UA-56276105-1', 'auto');
+  // ga('send', 'pageview');
+</script>
 
 </body>
 </html>
