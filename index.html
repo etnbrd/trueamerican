@@ -16,7 +16,6 @@
 
       * {
         box-sizing: border-box;
-        /*white-space: nowrap;*/
         padding: 0;
         margin: 0;
       }
@@ -42,33 +41,22 @@
         counter-reset: section;
       }
 
-      h1, h2 {
-        margin-top: 100pt;
-        margin-bottom: 100pt;
-      }
-
       h2 > *:first-child:before {
         counter-increment: section;
         content: "#" counter(section) "";
         opacity: 0.5;
       }
 
-      h1 > *, h2 > * {
-        position: relative;
+      h1 > span, h2 > span {
         font-size: 1.3em;
         display: block;
-        width: 100%;
         line-height: 0.8em;
       }
 
       .vertical {
         width: 0.1em;
         display: inline-block;
-        /*transform-origin: 100% 0%;*/
-        position: relative;
-
         opacity: 0.5;
-
         -webkit-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
         -ms-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
         -o-transform: translate(-0.3pt, -11.2pt) scale(0.172) rotate(90deg);
@@ -82,13 +70,34 @@
       [id$='3'] {
         background: rgb(255, 0, 73);
         color: rgb(255, 235, 205);
-        /*max-width: auto;*/
-        /*width: 200%;*/
+      }
+
+      hr {
+        border: none;
+        background: rgb(205, 183, 158);
+        height: 1px;
+        width: 60%;
+        margin: 100pt auto 100pt auto;
+      } 
+
+      hr:after {
+        content: '';
+
+        display: block;
+        width: 0.6em;
+        height: 0.6em;
+
+        position: relative;
+        top: -0.27em;
+        transform: rotate(45deg);
+
+        background: rgb(205, 183, 158);
+        margin: auto;
       }
 
       #name {
-        /*height: 280px;*/
         margin: 30% 0 70% 0;
+        padding: 100px 0;
         border: solid rgb(205, 183, 158);
         border-width: 2px 0;
       }
@@ -248,11 +257,15 @@
   <span id='lava3'>Who dive in, die vain</span>
 </h2>
 
+<hr/>
+
 <h2 id='castle'>
   <span id='castle1'>In the middle</span>
   <span id='castle2'>is the <span class='vertical'>fucking</span><span class='highlight'>Castle</span></span>
   <span id='castle3'>Who sip the King, win the game</span>
 </h2>
+
+<hr/>
 
 <h2 id='king'>
   <span id='king1'>The <span class='highlight'>Secret Order</span></span>
@@ -260,13 +273,15 @@
   <span id='king3'>four infantry lines to drink, before the king</span>
 </h2>
 
+<hr/>
+
 <h2 id='path'>
   <span id='path1'>A path of <span class='highlight'>twenty pebbles</span></span>
   <span id='path2'>surrounds the <span class='vertical'>fucking</span>Castle</span>
   <span id='path3'>Walk around to attack the pawns</span>
 </h2>
 
-<!-- width="700" height="700" -->
+<hr/>
 
 <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
  <g>
@@ -395,15 +410,21 @@
  </g>
 </svg>
 
+<hr/>
+
 <h2 id='spots'>
   <span id='spots1'>But in only four places</span>
   <span id='spots2'>Can you reach the premises</span>
 </h2>
 
+<hr/>
+
 <h2 id='beers'>
   <span id='beers1'>Carry no less than one</span>
   <span id='beers2'>No more than three, at once</span>
 </h2>
+
+<hr/>
 
 <h2 id='begin'>
   <span id='begin1'>Team as you please before</span>
